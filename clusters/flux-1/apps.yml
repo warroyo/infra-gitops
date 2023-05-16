@@ -4,12 +4,14 @@ kind: Kustomization
 metadata:
   name: apps
   namespace: flux-system
+resources:
+  - ../../apps/flux-1
 spec:
   dependsOn:
   - name: infrastructure
   interval: 10m0s
-  path: ./apps/flux-1
+  # path: ./apps/flux-1
   prune: true
-  sourceRef:
-    kind: GitRepository
-    name: infra-gitops
+  # sourceRef:
+  #   kind: GitRepository
+  #   name: infra-gitops
