@@ -3,7 +3,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: apps
-  # namespace: flux-system
+  namespace: flux-system
 spec:
   dependsOn:
   - name: infrastructure
@@ -12,4 +12,5 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
+    namespace: tanzu-continuousdelivery-resources
     name: infra-gitops
