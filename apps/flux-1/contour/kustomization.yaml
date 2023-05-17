@@ -15,8 +15,7 @@ patchesJSON6902:
     - op: add
       path: /spec/values/1
       value: {
-          "secretRef":
-            "name": "contour-packages-values-overrides"
+          "secretRef": {"name": "contour-packages-values-overrides"}
             }
 secretGenerator:
 - name: contour-packages-values
