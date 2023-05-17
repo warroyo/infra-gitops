@@ -1,9 +1,0 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
-kind: HelmRelease
-metadata:
-  name: contour
-  namespace: projectcontour
-spec:
-  chart:
-    spec:
-      chart: ./contour/11.0.2
