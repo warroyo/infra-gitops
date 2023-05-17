@@ -3,12 +3,12 @@ kind: Kustomization
 generatorOptions:
   disableNameSuffixHash: true
 resources:
-- ../base/contour/package-install.yml
+- ../../base/contour/package-install.yml
 secretGenerator:
 - name: contour-packages-values
   namespace: flux-system
   files:
-  - ../base/contour/values.yml
+  - ../../base/contour/values.yml
   - values.yml
   type: Opaque
   options:
