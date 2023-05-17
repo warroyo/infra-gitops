@@ -13,8 +13,11 @@ patchesJSON6902:
     name: contour
   patch: |-
     - op: add
-      path: /spec/values/1/secretRef/name
-      value: contour-packages-values-overrides
+      path: /spec/values/1
+      value: {
+          "secretRef":
+            "name": "contour-packages-values-overrides"
+            }
 secretGenerator:
 - name: contour-packages-values
   namespace: flux-system
