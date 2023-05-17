@@ -9,7 +9,7 @@ secretGenerator:
   namespace: flux-system
   files:
   - ../../base/contour/values.yml
-  - values.yml
+  - override-values.yml
   type: Opaque
   options:
     annotations:
