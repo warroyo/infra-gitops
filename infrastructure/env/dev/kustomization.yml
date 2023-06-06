@@ -8,4 +8,4 @@ resources:
 
 
 patchesStrategicMerge:
-- cert-manager/
+- cert-manager/package-install.yml
