@@ -11,4 +11,4 @@ vars:
       kind: Node
       version: v1
     fieldref:
-      fieldpath: metadata.annotations.cluster.x-k8s.io/cluster-name
+      fieldpath: metadata.annotations.'cluster.x-k8s.io/cluster-name'
