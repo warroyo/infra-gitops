@@ -5,6 +5,11 @@ generatorOptions:
 
 resources:
 - ../../base/contour/package-install.yml
+
+
+components:
+- ../../envs/dev/contour
+
 patchesJSON6902:
 - target:
     group: packaging.carvel.dev

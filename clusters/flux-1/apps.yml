@@ -8,7 +8,7 @@ spec:
   dependsOn:
   - name: infrastructure
   interval: 10m0s
-  path: ./apps/flux-1
+  path: ./apps/clusters/flux-1
   prune: true
   sourceRef:
     kind: GitRepository
