@@ -8,7 +8,7 @@ resources:
 
 
 components:
-- ../../envs/dev/contour
+- ../../env/dev/contour
 
 patchesJSON6902:
 - target:
