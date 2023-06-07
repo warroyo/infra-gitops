@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./
+  path: clustergroups/warroyo-flux/per-cluster
   postBuild:
     substituteFrom:
       - kind: ConfigMap
