@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
-  url: https://github.com/metacontroller/metacontroller
+  url: https://github.com/warroyo/metacontrollers.git
   ref:
     branch: main
 ---
@@ -16,7 +16,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: v1/
+  path: configmap-propogator/v1/
   prune: true
   sourceRef:
     kind: GitRepository
@@ -30,7 +30,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: manifests/
+  path: configmap-propogator/manifests/
   prune: true
   sourceRef:
     kind: GitRepository
