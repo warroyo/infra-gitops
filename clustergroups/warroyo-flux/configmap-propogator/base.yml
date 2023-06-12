@@ -30,7 +30,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: configmap-propogator/manifests/
+  path: configmap-propogator/manifest/
   prune: true
   sourceRef:
     kind: GitRepository
