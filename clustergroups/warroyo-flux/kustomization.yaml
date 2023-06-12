@@ -4,3 +4,4 @@ namespace: flux-system
 resources:
   - metacontroller/base.yml
   - ns.yaml
+  - configmap-propogator/base.yml
