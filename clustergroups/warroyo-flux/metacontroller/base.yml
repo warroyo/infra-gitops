@@ -7,7 +7,7 @@ spec:
   interval: 5m
   url: https://github.com/metacontroller/metacontroller
   ref:
-    branch: main
+    branch: master
   ignore: |-
     # exclude all
     /*
