@@ -1,0 +1,33 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: metacontroller
+  namespace: flux-system
+spec:
+  interval: 5m
+  url: https://github.com/metacontroller/metacontroller
+  ref:
+    branch: main
+  ignore: |-
+    # exclude all
+    /*
+    # include charts directory
+    !/deploy/helm/metacontroller
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: metacontroller
+  namespace: flux-system
+spec:
+  interval: 1m
+  releaseName: metacontroller
+  chart:
+    spec:
+      chart: deploy/helm/metacontroller
+      sourceRef:
+        kind: GitRepository
+        name: metacontroller
+  values:
+    image:
+      tag: v2.2.5
