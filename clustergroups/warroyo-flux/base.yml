@@ -22,6 +22,7 @@ metadata:
 spec:
   dependsOn:
   - name: group-apps
+    namespace: tanzu-continuousdelivery-resources
   interval: 10m0s
   path: clustergroups/warroyo-flux/per-cluster
   postBuild:
