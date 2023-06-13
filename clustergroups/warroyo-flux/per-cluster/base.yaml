@@ -9,5 +9,5 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    namespace: tanzu-continuousdelivery-resources
+    namespace: flux-system
     name: infra-gitops
