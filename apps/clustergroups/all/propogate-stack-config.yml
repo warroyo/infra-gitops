@@ -6,7 +6,7 @@ metadata:
   namespace:  tanzu-continuousdelivery-resources
 spec:
   dependsOn:
-  - group-apps
+  - name: group-apps
   interval: 10m0s
   path: ./apps/clustergroups/all/stack-config-prop
   prune: true
