@@ -6,6 +6,6 @@ resources:
   - ../../base/metacontroller/install.yml
   - ns.yaml
   - ../../base/configmap-propogator/install.yml
-  - propogate-stack-config
+  - propogate-stack-config.yml
 
 
