@@ -5,7 +5,7 @@ kind: Kustomization
 resources:
   - ../../base/metacontroller/install.yml
   - ns.yaml
-  - ../../base/configmap-propogator/base.yml
+  - ../../base/configmap-propogator/install.yml
   - stack-config.yml
 
 
