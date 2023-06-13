@@ -1,0 +1,16 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: stack-config-propagation
+  namespace:  tanzu-continuousdelivery-resources
+spec:
+  dependsOn:
+  - group-apps
+  interval: 10m0s
+  path: ./apps/clustergroups/all/stack-config-prop
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    namespace: tanzu-continuousdelivery-resources
+    name: infra-gitops
