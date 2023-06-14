@@ -28,7 +28,7 @@ spec:
   postBuild:
     substituteFrom:
       - kind: Secret
-        name: cluuster-name-secret
+        name: cluster-name-secret
   prune: true
   sourceRef:
     kind: GitRepository
