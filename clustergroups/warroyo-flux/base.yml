@@ -27,8 +27,8 @@ spec:
   path: clustergroups/warroyo-flux/per-cluster
   postBuild:
     substituteFrom:
-      - kind: ConfigMap
-        name: stack-config
+      - kind: Secret
+        name: cluuster-name-secret
   prune: true
   sourceRef:
     kind: GitRepository

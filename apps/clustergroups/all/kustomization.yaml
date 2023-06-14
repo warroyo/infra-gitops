@@ -3,9 +3,7 @@ kind: Kustomization
 
 
 resources:
-  - ../../base/metacontroller/install.yml
   - ns.yaml
-  - ../../base/configmap-propogator/install.yml
-  - propogate-stack-config.yml
+  - cluster-name-secret.yml
 
 
