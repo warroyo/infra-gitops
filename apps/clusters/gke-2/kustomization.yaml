@@ -10,7 +10,7 @@ resources:
 components:
 - ../../env/dev/contour
 
-patches:
+patchesJSON6902:
 - target:
     group: packaging.carvel.dev
     version: v1alpha1
