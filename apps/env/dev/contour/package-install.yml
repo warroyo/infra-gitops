@@ -1,8 +1,8 @@
 ---
-# apiVersion: packaging.carvel.dev/v1alpha1
-# kind: PackageInstall
-# metadata:
-#   name: contour
-#   namespace: flux-system
-#   annotations:
-#     environment: dev
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: contour
+  namespace: infra-packages
+  annotations:
+    environment: dev
