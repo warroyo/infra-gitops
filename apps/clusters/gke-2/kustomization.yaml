@@ -16,7 +16,6 @@ patches:
     version: v1alpha1
     kind: PackageInstall
     name: contour
-    namespace: infra-packages
   patch: |-
     - op: add
       path: /spec/values/1
