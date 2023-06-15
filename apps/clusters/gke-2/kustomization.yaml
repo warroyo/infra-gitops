@@ -7,8 +7,8 @@ resources:
 - ../../base/contour/package-install.yml
 
 
-components:
-- ../../env/dev/contour
+# components:
+# - ../../env/dev/contour
 
 patchesJSON6902:
 - target:
