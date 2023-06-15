@@ -42,7 +42,7 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  url: https://github.com/warroyo/app-team-1-gitops
+  url: https://github.com/warroyo/group-0001-gitops
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
