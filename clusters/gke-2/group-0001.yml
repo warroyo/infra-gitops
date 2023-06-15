@@ -53,6 +53,7 @@ metadata:
 spec:
   dependsOn:
   - name: apps
+    namespace: tanzu-continuousdelivery-resources
   serviceAccountName: group-0001
   interval: 10m0s
   path: ./clusters/gke-2
