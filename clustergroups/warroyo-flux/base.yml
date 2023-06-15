@@ -6,7 +6,7 @@ metadata:
   namespace:  tanzu-continuousdelivery-resources
 spec:
   interval: 10m0s
-  path: ./apps/clustergroups/all
+  path: ./apps/clustergroups/warroyo-flux
   prune: true
   sourceRef:
     kind: GitRepository
@@ -24,7 +24,7 @@ spec:
   - name: group-apps
     namespace: tanzu-continuousdelivery-resources
   interval: 10m0s
-  path: clustergroups/warroyo-flux/per-cluster
+  path: clustergroups/common/per-cluster
   postBuild:
     substituteFrom:
       - kind: Secret

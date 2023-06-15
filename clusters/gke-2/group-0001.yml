@@ -1,0 +1,60 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    toolkit.fluxcd.io/tenant: group-0001
+  name: group-0001
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    toolkit.fluxcd.io/tenant: group-0001
+  name: group-0001
+  namespace: group-0001
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    toolkit.fluxcd.io/tenant: group-0001
+  name: group-0001-reconciler
+  namespace: group-0001
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: group-0001
+  namespace: group-0001
+
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: group-0001
+  namespace: group-0001
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: https://github.com/warroyo/app-team-1-gitops
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: group-0001
+  namespace: group-0001
+spec:
+  serviceAccountName: group-0001
+  interval: 10m0s
+  path: ./clusters/gke-2
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: group-0001

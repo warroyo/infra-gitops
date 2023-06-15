@@ -2,11 +2,13 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: infrastructure
-  namespace: flux-system
+  name: apps
+  namespace: tanzu-continuousdelivery-resources
 spec:
+  dependsOn:
+  - name: infrastructure
   interval: 10m0s
-  path: ./infrastructure/env/dev
+  path: ./apps/clusters/gke-2
   prune: true
   sourceRef:
     kind: GitRepository
