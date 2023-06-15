@@ -4,8 +4,4 @@ generatorOptions:
   disableNameSuffixHash: true
 
 resources:
-- ../../base/cluster-name-secret/install.yml
-
-
-components:
-- ../../env/dev/contour
+- ../../base/cluster-name-secret/
