@@ -12,7 +12,7 @@ kind: ServiceAccount
 metadata:
   labels:
     toolkit.fluxcd.io/tenant: group-0001
-  name: group-0001
+  name: tenant-flux-reconciler
   namespace: group-0001
 
 ---
@@ -29,7 +29,7 @@ roleRef:
   name: cluster-admin
 subjects:
 - kind: ServiceAccount
-  name: group-0001
+  name: tenant-flux-reconciler
   namespace: group-0001
 
 ---
@@ -54,7 +54,7 @@ spec:
   dependsOn:
   - name: apps
     namespace: tanzu-continuousdelivery-resources
-  serviceAccountName: group-0001
+  serviceAccountName: tenant-flux-reconciler
   interval: 10m0s
   path: ./clusters/gke-2
   prune: true

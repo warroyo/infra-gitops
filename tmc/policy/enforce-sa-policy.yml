@@ -1,0 +1,21 @@
+fullName:
+  clusterGroupName: <cluster-group>
+  name: fluxenforcesa
+spec:
+  input:
+    enforcementAction: deny
+    parameters: {}
+    targetKubernetesResources:
+    - apiGroups:
+      - kustomize.toolkit.fluxcd.io
+      kinds:
+      - Kustomization
+  namespaceSelector:
+    matchExpressions:
+    - key: kubernetes.io/metadata.name
+      operator: NotIn
+      values:
+      - tanzu-continuousdelivery-resources
+  recipe: fluxenforcesa
+  recipeVersion: v1
+  type: custom-policy

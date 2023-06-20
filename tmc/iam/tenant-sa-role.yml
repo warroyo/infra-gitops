@@ -1,0 +1,22 @@
+fullName:
+  name: tenant-sa-ns-role
+spec:
+  resourceTypes:
+  - clustergroups
+  - clusters
+  resources:
+  - CLUSTER_GROUP
+  - CLUSTER
+  rules:
+  - apiGroups:
+    - '*'
+    resources:
+    - namespaces
+    verbs:
+    - get
+    - list
+    - watch
+    - create
+    - update
+    - patch
+    - delete
