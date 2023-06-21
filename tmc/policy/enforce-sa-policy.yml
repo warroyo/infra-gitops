@@ -8,8 +8,10 @@ spec:
     targetKubernetesResources:
     - apiGroups:
       - kustomize.toolkit.fluxcd.io
+      - helm.toolkit.fluxcd.io/v2beta1
       kinds:
       - Kustomization
+      - HelmRelease
   namespaceSelector:
     matchExpressions:
     - key: kubernetes.io/metadata.name

@@ -31,21 +31,6 @@ subjects:
 - kind: ServiceAccount
   name: tenant-flux-reconciler
   namespace: group-0001
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  labels:
-    toolkit.fluxcd.io/tenant: group-0001
-  name: group-0001-reconciler
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: tenant-sa-ns-role
-subjects:
-- kind: ServiceAccount
-  name: tenant-flux-reconciler
-  namespace: group-0001
 
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
