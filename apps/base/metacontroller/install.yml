@@ -25,5 +25,5 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    namespace: flux-system
+    namespace: tanzu-continuousdelivery-resources
     name: metacontroller
