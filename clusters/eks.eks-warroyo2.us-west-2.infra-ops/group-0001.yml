@@ -34,6 +34,8 @@ spec:
     - patch: |-
         apiVersion: tmc.tanzufield.vmware.com/v1
         kind: TMCNamespace
+        metadata:
+          name: not used
         spec:
           fullName:
             clusterName: gke-2
