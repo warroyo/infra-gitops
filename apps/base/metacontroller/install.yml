@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
   name: metacontroller
-  namespace: flux-system
+  namespace: tanzu-continuousdelivery-resources
 spec:
   interval: 5m
   url: https://github.com/metacontroller/metacontroller
@@ -18,7 +18,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: metacontroller
-  namespace: flux-system
+  namespace: tanzu-continuousdelivery-resources
 spec:
   interval: 10m0s
   path: manifests/production
