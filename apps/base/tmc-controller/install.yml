@@ -12,7 +12,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: configmap-prop-crd
+  name: tmc-controller-crd
   namespace: tanzu-continuousdelivery-resources
 spec:
   interval: 10m0s
@@ -26,7 +26,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: configmap-prop-install
+  name: tmc-controller-install
   namespace: tanzu-continuousdelivery-resources
 spec:
   interval: 10m0s
